@@ -7,6 +7,11 @@ document.querySelector("#fetchPokemon").addEventListener("click", getPokemonAPI)
 //get infomation from the API
 async function getPokemonAPI(event){
     let pokemonName = document.querySelector("input[type=text]").value;//input box
+    try {
+        validateName(pokemonName)
+    } catch (error) {
+        return;
+    }
     const getPokemon = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemonName);//await a response from API
     const getPokemonResponse = await getPokemon.json();//make the info I get from the api useable.
     let img = document.querySelector("#pokemonImage");//get the id for the image
@@ -30,4 +35,9 @@ function formatNumbers(num){
     }
     
     return number;
+}
+function validateName(name){
+    if (!name) throw new Error("Please input a valid pokemon name!");
+    if (name == " ") throw new Error("Please input a valid pokemon name!")
+
 }
