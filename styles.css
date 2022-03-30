@@ -1,0 +1,53 @@
+/*
+    Last Updated: 3/29/2022
+    Created By: Kyle Stetz
+    Description: First Revature Project Web Page Styling
+*/
+body{
+    background-color: red;
+    
+}
+#header{
+    margin: 0px,0px,0px,0px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 2px;
+    border: 2px;
+    
+}
+#hobbiesFavorites{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 2px;
+}
+#imageContainer{
+    padding: 2px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#labels{
+    display: flex;
+    justify-content:space-around;
+}
+img{
+    height: 300px;
+    width: 400px;
+}
+label{
+    text-align: center;
+}
+p{
+    width: 30%;
+}
+#apiDisplay{
+    display: flex;
+    justify-content: space-evenly;
+}
+#apiLabel{
+    display: flex;
+    justify-content: flex-start;
+}
+table,th,td{
+    border: 1px solid;
+}

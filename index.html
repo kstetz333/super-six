@@ -4,18 +4,23 @@
     <!-- 
         Last Updated: 3/29/2022
         Created By: Kyle Stetz
-        Description: First Revature Project
+        Description: First Revature Project Web Page
      -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 0</title>
+    <!--Link a style sheet to make the website pretty-->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header><h1>My Favorite Things</h1></header>
+    <div id = "header"><h1>My Favorite Things</h1></div>
+    <div id = "labels"><label id = "animal"><h3>Animals</h3></label>
+        <label for="about me"><h3>A little about me</h3></label>
+    <label id = "MA"><h3>Matial Arts</h3></label></div>
     <div id = "hobbiesFavorites">
         <!--Make list of random things I like with some info and a table-->
-        <label>Animals</label>
+        
         <ul>
             <li>My Cat "Squish"</li>
             <li>Dogs</li>
@@ -26,7 +31,7 @@
             For my hobby I do martial arts. More specifically I practice the South Korean martial art of tae kwon do. I have listed the ranks
             and the forms or poomse that is required for each belt rank. I am currently a 1st dan black belt.
         </p>
-        <label >Matial Arts</label>
+        
         <table>
             <tr>
                 <th>Rank</th>
@@ -82,12 +87,13 @@
         <a href="https://en.wikipedia.org/wiki/Brenda_Sell"><img src="C:\Users\kstet\Desktop\Revature_Training\Projects\Project0\super-six\images\Grandmaster_Brenda_Sell.jpg" alt="Brenda Sell Teaching Chung Do Kwon"></a>
     </div>
     <!--Set up a container to get and display information I get from the API-->
-    <div id = "apiConainer">
-        <label for="Pokemon API">What's your favorite pokemon?</label>
+    <label for="Pokemon API" id = "apiLabel"><h3>What's your favorite pokemon?</h3></label>
+    <div id = "apiContainer">
+        
         <input type="text">
         <button id = "fetchPokemon">Click for the Stats!</button>
         <span id ="apiDisplay">
-            <img id = "pokemonImage" src="" alt="">
+            <img id = "pokemonImage" src="" alt="" style="display:none">
             <p id = "heightWeight"></p>
         </span>
 </div>
