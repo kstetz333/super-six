@@ -1,5 +1,9 @@
+//Last Updated: 3/29/2022
+//Created By: Kyle Stetz
+//Description: First Revature Project Fetch Javascript
 //set up event listener
-document.querySelector("#fetchPokemon").addEventListener("click",getPokemonAPI);
+document.querySelector("#fetchPokemon").addEventListener("click", getPokemonAPI);
+
 //get infomation from the API
 async function getPokemonAPI(event){
     let pokemonName = document.querySelector("input[type=text]").value;//input box
@@ -8,6 +12,7 @@ async function getPokemonAPI(event){
     let img = document.querySelector("#pokemonImage");//get the id for the image
     img.src = getPokemonResponse.sprites.other.dream_world.front_default;//set the source and the alt text
     img.alt = "Front image for " + getPokemonResponse.name;
+    img.style.display = "inline-block";
     //get the height and weight for the pokemon
     let pokemonHeight = getPokemonResponse.height;
     let pokemonWeight = getPokemonResponse.weight;
